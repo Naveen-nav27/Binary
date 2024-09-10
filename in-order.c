@@ -1,19 +1,19 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// Define the structure for the tree node
+
 typedef struct Node {
     int data;
     struct Node *left;
     struct Node *right;
 } Node;
 
-// Function prototypes
+
 Node* createNode(int data);
 Node* insert(Node* root, int data);
 void inorderTraversal(Node* root);
 
-// Main function
+
 int main() {
     Node* root = NULL;
 
@@ -34,7 +34,7 @@ int main() {
     return 0;
 }
 
-// Function to create a new node
+
 Node* createNode(int data) {
     Node* newNode = (Node*)malloc(sizeof(Node));
     newNode->data = data;
@@ -42,7 +42,7 @@ Node* createNode(int data) {
     return newNode;
 }
 
-// Function to insert a new node into the binary search tree
+
 Node* insert(Node* root, int data) {
     if (root == NULL) {
         return createNode(data);
@@ -57,13 +57,13 @@ Node* insert(Node* root, int data) {
     return root;
 }
 
-// Function to perform in-order traversal of the binary tree
+
 void inorderTraversal(Node* root) {
     if (root == NULL) {
         return;
     }
 
-    inorderTraversal(root->left);      // Visit left subtree
-    printf("%d ", root->data);         // Visit root node
-    inorderTraversal(root->right);     // Visit right subtree
+    inorderTraversal(root->left); 
+    printf("%d ", root->data); 
+    inorderTraversal(root->right); 
 }
