@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <ctype.h>
 
-// Define a structure for the expression tree nodes
+
 typedef struct Node {
     char data;
     struct Node *left;
@@ -30,7 +30,7 @@ int main() {
     return 0;
 }
 
-// Function to create a new node
+
 Node* createNode(char data) {
     Node* newNode = (Node*)malloc(sizeof(Node));
     newNode->data = data;
@@ -38,7 +38,7 @@ Node* createNode(char data) {
     return newNode;
 }
 
-// Function to construct the expression tree from postfix expression
+
 Node* constructTree(char* postfix) {
     Node* stack[100];
     int top = -1;
